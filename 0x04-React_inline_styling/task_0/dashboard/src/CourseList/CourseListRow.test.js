@@ -13,7 +13,7 @@ describe("CourseListRow Component", () => {
       const wrapper = shallow(<CourseListRow isHeader={true} textFirstCell="test" textSecondCell={null} />);
 
       expect(wrapper.find("tr").children()).toHaveLength(1);
-      expect(wrapper.find("tr").childAt(0).html()).toEqual('<th colSpan="2">test</th>');
+      expect(wrapper.find("tr").childAt(0).html()).toEqual('<th style="background-color:#deb5b545" colSpan="2">test</th>');
     });
     
     it("renders two cells when isHeader is true and textSecondCell is present", () => {
