@@ -6,9 +6,9 @@ import CourseList from "../CourseList/CourseList";
 import Notifications from "../Notifications/Notifications";
 import BodySectionWithMarginBottom from "../BodySection/BodySectionWithMarginBottom";
 import BodySection from "../BodySection/BodySection";
+import { StyleSheet, css } from "aphrodite";
 import PropTypes from "prop-types";
 import { getLatestNotification } from "../utils/utils";
-import { StyleSheet, css } from "aphrodite";
 
 class App extends React.Component {
   constructor(props) {
@@ -63,11 +63,11 @@ class App extends React.Component {
         <div className={css(styles.App)}>
           <div className="heading-section">
             <Notifications
-	      listNotifications={this.listNotifications}
-	      displayDrawer={this.state.displayDrawer}
-	      handleDisplayDrawer={this.handleDisplayDrawer}
-	      handleHideDrawer={this.handleHideDrawer}
-	    />
+              listNotifications={this.listNotifications}
+              displayDrawer={this.state.displayDrawer}
+              handleDisplayDrawer={this.handleDisplayDrawer}
+              handleHideDrawer={this.handleHideDrawer}
+            />
             <Header />
           </div>
           {this.props.isLoggedIn ? (
@@ -98,7 +98,7 @@ const styles = StyleSheet.create({
     maxWidth: "100vw",
     position: "relative",
     fontFamily: "Arial, Helvetica, sans-serif",
-  }
+  },
 });
 
 App.defaultProps = {
